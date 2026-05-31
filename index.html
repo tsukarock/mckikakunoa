@@ -1,7 +1,921 @@
-<!doctype html>
-<html lang="ja">
-<head><meta charset="utf-8"><title>mckikakunoa</title></head>
+
+<!DOCTYPE html>
+<html lang="ja" prefix="og: https://ogp.me/ns#">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+  <!-- ── SEO ── -->
+  <title>【爆速遺影】エムシー企画ノア | 最安・最速の葬儀専門総合商社</title>
+  <meta name="description" content="【ChatGTPで遺影写真の内製化サポート】 業界最速最安をお約束いたしますこれからの葬儀を支える総合商社 有限会社エムシー企画ノア" />
+  <meta name="keywords" content="遺影写真,AI遺影,遺影内製化,爆速遺影,ChatGPT遺影,Memorial Bird,葬儀,エムシー企画ノア,MC KIKAKU NOA,綾部" />
+  <meta name="author" content="有限会社エムシー企画ノア" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.mc-noa.com/" />
+
+  <!-- ── OGP（SNSシェア用） ── -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="【爆速遺影】エムシー企画ノア | 最安・最速の葬儀専門総合商社" />
+  <meta property="og:description" content="【ChatGTPで遺影写真の内製化サポート】 業界最速最安をお約束いたしますこれからの葬儀を支える総合商社 有限会社エムシー企画ノア" />
+  <meta property="og:url" content="https://www.mc-noa.com/" />
+  <meta property="og:site_name" content="MC KIKAKU NOA" />
+  <meta property="og:locale" content="ja_JP" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="【爆速遺影】エムシー企画ノア | 最安・最速の葬儀専門総合商社" />
+  <meta name="twitter:description" content="【ChatGTPで遺影写真の内製化サポート】 業界最速最安をお約束いたしますこれからの葬儀を支える総合商社 有限会社エムシー企画ノア" />
+
+  <!-- ── 構造化データ（Google検索リッチリザルト） ── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "有限会社エムシー企画ノア",
+    "alternateName": "MC KIKAKU NOA",
+    "url": "https://www.mc-noa.com",
+    "telephone": "077-552-2811",
+    "email": "info@mc-noa.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "大島町中地28-2",
+      "addressLocality": "綾部市",
+      "addressRegion": "京都府",
+      "postalCode": "623-0046",
+      "addressCountry": "JP"
+    },
+    "description": "最新AIで最短10分納品の遺影写真制作・葬儀社向けChatGPT内製化サポート・Memorial Birdリアルタイム写真投影サービス",
+    "openingHours": "Mo-Su 00:00-23:59",
+    "priceRange": "¥"
+  }
+  </script>
+
+  <!-- ── フォント（Google Fonts） ── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700;900&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --blue-deep:   #0a1628;
+      --blue-dark:   #0d2247;
+      --blue-mid:    #1565c0;
+      --blue-accent: #00b0ff;
+      --white:       #ffffff;
+      --gray-light:  #e3eaf5;
+      --gray-text:   #8baed4;
+      --red-accent:  #e53935;
+    }
+
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+    body {
+      font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;
+      background: var(--blue-deep);
+      color: var(--white);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ────────────────────────────────
+       NAV
+    ──────────────────────────────── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 200;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 60px;
+      height: 72px;
+      background: rgba(10,22,40,.92);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+    .nav-logo img { height: auto; max-height: 44px; width: auto; max-width: 180px; display: block; object-fit: contain; }
+    .nav-links { display: flex; gap: 36px; list-style: none; }
+    .nav-links a {
+      color: var(--gray-light);
+      text-decoration: none;
+      font-size: .88rem;
+      letter-spacing: .1em;
+      font-weight: 600;
+      transition: color .2s;
+    }
+    .nav-links a:hover { color: var(--white); }
+    .nav-cta {
+      background: var(--blue-accent);
+      color: var(--blue-deep);
+      font-weight: 700;
+      font-size: .85rem;
+      padding: 10px 22px;
+      border-radius: 4px;
+      text-decoration: none;
+      letter-spacing: .06em;
+      white-space: nowrap;
+      transition: opacity .2s, transform .2s;
+    }
+    .nav-cta:hover { opacity: .85; transform: translateY(-1px); }
+
+    /* ハンバーガー（スマホ） */
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 6px;
+    }
+    .nav-hamburger span {
+      display: block;
+      width: 24px; height: 2px;
+      background: var(--white);
+      border-radius: 2px;
+      transition: all .3s;
+    }
+
+    /* モバイルメニュー */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 72px; left: 0; right: 0;
+      background: rgba(10,22,40,.97);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      z-index: 199;
+      padding: 24px 0;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+    .mobile-menu.open { display: block; }
+    .mobile-menu ul { list-style: none; }
+    .mobile-menu ul li a {
+      display: block;
+      padding: 16px 32px;
+      color: var(--gray-light);
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+      border-bottom: 1px solid rgba(255,255,255,.05);
+      transition: color .2s;
+    }
+    .mobile-menu ul li a:hover { color: var(--blue-accent); }
+    .mobile-menu-cta {
+      display: block;
+      margin: 20px 32px 0;
+      background: var(--blue-accent);
+      color: var(--blue-deep);
+      font-weight: 700;
+      font-size: .95rem;
+      padding: 14px;
+      border-radius: 6px;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    /* ────────────────────────────────
+       HERO
+    ──────────────────────────────── */
+    .hero {
+      min-height: 100vh;
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 120px 24px 80px;
+      position: relative;
+      overflow: hidden;
+      background: radial-gradient(ellipse 80% 60% at 50% 40%,
+        rgba(21,101,192,.35) 0%, transparent 70%),
+        var(--blue-deep);
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='800'%3E%3Cdefs%3E%3CradialGradient id='g' cx='50%25' cy='50%25' r='50%25'%3E%3Cstop offset='0%25' stop-color='%2300b0ff' stop-opacity='.06'/%3E%3Cstop offset='100%25' stop-color='transparent'/%3E%3C/radialGradient%3E%3C/defs%3E%3Ccircle cx='400' cy='400' r='400' fill='url(%23g)'/%3E%3C/svg%3E") center/cover no-repeat;
+      pointer-events: none;
+    }
+    .hero-eyebrow {
+      font-size: .78rem;
+      letter-spacing: .25em;
+      color: var(--blue-accent);
+      text-transform: uppercase;
+      margin-bottom: 24px;
+      font-weight: 600;
+    }
+    .hero h1 {
+      font-size: clamp(2.6rem, 8vw, 6rem);
+      font-weight: 900;
+      line-height: 1.12;
+      letter-spacing: -.02em;
+      margin-bottom: 28px;
+    }
+    .hero h1 span { color: var(--blue-accent); }
+    .hero-sub {
+      font-size: clamp(.95rem, 2.5vw, 1.25rem);
+      color: var(--gray-light);
+      max-width: 580px;
+      margin: 0 auto 44px;
+      line-height: 1.8;
+    }
+    .hero-badges {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 48px;
+    }
+    .badge {
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 40px;
+      padding: 9px 20px;
+      font-size: .84rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+      white-space: nowrap;
+    }
+    .badge.accent { background: var(--blue-accent); color: var(--blue-deep); border-color: var(--blue-accent); }
+    .hero-cta {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      display: inline-block;
+      background: var(--blue-accent);
+      color: var(--blue-deep);
+      font-weight: 800;
+      font-size: 1rem;
+      padding: 16px 36px;
+      border-radius: 6px;
+      text-decoration: none;
+      letter-spacing: .06em;
+      white-space: nowrap;
+      position: relative;
+      z-index: 1;
+      transition: transform .2s, opacity .2s;
+    }
+    .btn-primary:hover { transform: translateY(-2px); opacity: .9; }
+    .btn-secondary {
+      background: rgba(255,255,255,.1);
+      color: var(--white);
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 16px 36px;
+      border-radius: 6px;
+      text-decoration: none;
+      letter-spacing: .06em;
+      border: 1px solid rgba(255,255,255,.2);
+      white-space: nowrap;
+      transition: background .2s;
+    }
+    .btn-secondary:hover { background: rgba(255,255,255,.18); }
+
+    /* ────────────────────────────────
+       STATS STRIP
+    ──────────────────────────────── */
+    .stats-strip {
+      background: var(--blue-dark);
+      padding: 52px 40px;
+      display: flex;
+      justify-content: center;
+      gap: 60px;
+      flex-wrap: wrap;
+    }
+    .stat { text-align: center; }
+    .stat-num {
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
+      font-weight: 900;
+      color: var(--blue-accent);
+      letter-spacing: -.02em;
+    }
+    .stat-label {
+      font-size: .82rem;
+      color: var(--gray-text);
+      margin-top: 6px;
+      letter-spacing: .08em;
+    }
+
+    /* ────────────────────────────────
+       SECTION BASE
+    ──────────────────────────────── */
+    section { padding: 100px 40px; }
+    .section-inner { max-width: 1100px; margin: 0 auto; }
+    .section-label {
+      font-size: .72rem;
+      letter-spacing: .3em;
+      color: var(--blue-accent);
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+    .section-title {
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      font-weight: 900;
+      line-height: 1.2;
+      letter-spacing: -.02em;
+      margin-bottom: 20px;
+    }
+    .section-body {
+      font-size: 1rem;
+      color: var(--gray-light);
+      max-width: 560px;
+      line-height: 1.85;
+    }
+
+    /* ────────────────────────────────
+       FEATURE LIST
+    ──────────────────────────────── */
+    .feature-list { list-style: none; margin-top: 28px; display: flex; flex-direction: column; gap: 14px; }
+    .feature-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      font-size: .97rem;
+      color: var(--gray-light);
+    }
+    .feature-list li::before {
+      content: '';
+      width: 20px; height: 20px; min-width: 20px;
+      background: var(--blue-accent) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath fill='%230a1628' d='M8 13.4L4.6 10l-1.4 1.4L8 16.2l9.8-9.8L16.4 5z'/%3E%3C/svg%3E") center/14px no-repeat;
+      border-radius: 50%;
+      margin-top: 3px;
+      flex-shrink: 0;
+    }
+
+    /* ────────────────────────────────
+       SPLIT LAYOUT
+    ──────────────────────────────── */
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: start;
+    }
+
+    /* ────────────────────────────────
+       MEMORIAL BIRD POINTS
+    ──────────────────────────────── */
+    .mb-points {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 8px;
+    }
+    .mb-point {
+      background: var(--blue-deep);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 12px;
+      padding: 22px 18px;
+      text-align: center;
+    }
+    .mb-point-num {
+      font-size: .68rem;
+      letter-spacing: .2em;
+      color: var(--blue-accent);
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+    .mb-point-text {
+      font-weight: 800;
+      line-height: 1.5;
+      font-size: .95rem;
+    }
+
+    /* ────────────────────────────────
+       CARDS GRID
+    ──────────────────────────────── */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 52px;
+    }
+    .card {
+      background: var(--blue-dark);
+      border: 1px solid rgba(255,255,255,.07);
+      border-radius: 12px;
+      padding: 32px 24px;
+      transition: transform .25s, border-color .25s;
+    }
+    .card:hover { transform: translateY(-6px); border-color: var(--blue-accent); }
+    .card-icon { width: 40px; height: 40px; margin-bottom: 18px; opacity: .75; }
+    .card h3 { font-size: 1.05rem; font-weight: 800; margin-bottom: 10px; }
+    .card p { font-size: .88rem; color: var(--gray-text); line-height: 1.75; }
+
+    /* ────────────────────────────────
+       CAMPAIGN BANNER
+    ──────────────────────────────── */
+    .campaign {
+      background: linear-gradient(135deg, var(--blue-mid) 0%, #0d47a1 100%);
+      padding: 80px 40px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .campaign::before {
+      content: '';
+      position: absolute;
+      width: 600px; height: 600px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.04);
+      top: -200px; right: -100px;
+      pointer-events: none;
+    }
+    .campaign-label {
+      display: inline-block;
+      background: var(--red-accent);
+      color: #fff;
+      font-weight: 800;
+      font-size: .78rem;
+      letter-spacing: .15em;
+      padding: 6px 18px;
+      border-radius: 4px;
+      margin-bottom: 24px;
+    }
+    .campaign h2 {
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      font-weight: 900;
+      margin-bottom: 16px;
+      position: relative; z-index: 1;
+    }
+    .campaign > p {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,.82);
+      margin-bottom: 36px;
+      position: relative; z-index: 1;
+    }
+    .campaign-note {
+      font-size: .76rem;
+      color: rgba(255,255,255,.5);
+      margin-top: 20px;
+      position: relative; z-index: 1;
+    }
+
+    /* ────────────────────────────────
+       COMPANY TABLE
+    ──────────────────────────────── */
+    .company-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 48px;
+      font-size: .95rem;
+    }
+    .company-table tr { border-bottom: 1px solid rgba(255,255,255,.07); }
+    .company-table tr:last-child { border-bottom: none; }
+    .company-table th {
+      text-align: left;
+      padding: 18px 24px 18px 0;
+      color: var(--gray-text);
+      font-weight: 600;
+      white-space: nowrap;
+      width: 200px;
+      vertical-align: top;
+    }
+    .company-table td {
+      padding: 18px 0;
+      color: var(--gray-light);
+      line-height: 1.75;
+    }
+
+    /* ────────────────────────────────
+       CONTACT
+    ──────────────────────────────── */
+    .contact-section { background: var(--blue-deep); text-align: center; }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      max-width: 760px;
+      margin: 44px auto 0;
+    }
+    .contact-card {
+      background: var(--blue-dark);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 12px;
+      padding: 36px 24px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 190px;
+    }
+    .c-icon { width: 34px; height: 34px; margin: 0 auto 14px; opacity: .7; display: block; }
+    .contact-card .label { font-size: .76rem; color: var(--gray-text); letter-spacing: .14em; margin-bottom: 8px; }
+    .contact-card .value { font-size: 1rem; font-weight: 700; }
+    .contact-card .sub { font-size: .78rem; color: var(--gray-text); margin-top: 6px; }
+    .contact-card a { color: var(--blue-accent); text-decoration: none; }
+    .contact-card a:hover { text-decoration: underline; }
+
+    /* ────────────────────────────────
+       FOOTER
+    ──────────────────────────────── */
+    footer {
+      background: #060e1a;
+      padding: 48px 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+      border-top: 1px solid rgba(255,255,255,.06);
+    }
+    .footer-logo img { height: 28px; opacity: .6; display: block; }
+    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+    .footer-links a { color: var(--gray-text); text-decoration: none; font-size: .8rem; transition: color .2s; }
+    .footer-links a:hover { color: var(--white); }
+    .footer-copy { color: var(--gray-text); font-size: .76rem; }
+
+    /* ────────────────────────────────
+       RESPONSIVE — タブレット
+    ──────────────────────────────── */
+    @media (max-width: 1024px) {
+      .cards-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    /* ────────────────────────────────
+       RESPONSIVE — スマートフォン
+    ──────────────────────────────── */
+    @media (max-width: 768px) {
+      /* NAV */
+      nav { padding: 0 20px; height: 64px; }
+      .nav-links { display: none; }
+      .nav-cta { display: none; }
+      .nav-hamburger { display: flex; }
+      .nav-logo img { height: 34px; }
+
+      /* HERO */
+      .hero { padding: 100px 20px 60px; }
+      .hero h1 { font-size: clamp(2.2rem, 10vw, 3rem); }
+      .hero-eyebrow { font-size: .7rem; letter-spacing: .18em; }
+      .hero-badges { gap: 8px; }
+      .badge { padding: 8px 16px; font-size: .8rem; }
+      .btn-primary, .btn-secondary { width: 100%; text-align: center; padding: 16px 24px; }
+      .hero-cta { flex-direction: column; align-items: stretch; max-width: 320px; margin: 0 auto; }
+
+      /* STATS */
+      .stats-strip { padding: 40px 20px; gap: 32px; }
+      .stat-num { font-size: clamp(2rem, 8vw, 2.8rem); }
+
+      /* SECTIONS */
+      section { padding: 64px 20px; }
+
+      /* SPLIT */
+      .split { grid-template-columns: 1fr; gap: 36px; }
+
+      /* MEMORIAL BIRD POINTS */
+      .mb-points { grid-template-columns: 1fr 1fr; gap: 12px; }
+      .mb-point { padding: 18px 12px; }
+      .mb-point-text { font-size: .88rem; }
+
+      /* CARDS */
+      .cards-grid { grid-template-columns: 1fr; gap: 16px; margin-top: 36px; }
+
+      /* CAMPAIGN */
+      .campaign { padding: 60px 20px; }
+
+      /* COMPANY */
+      .company-table th { width: 110px; font-size: .85rem; padding-right: 12px; }
+      .company-table td { font-size: .88rem; }
+
+      /* CONTACT */
+      .contact-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
+      .contact-card { min-height: 160px; padding: 24px 16px; }
+      .contact-card .value { font-size: .9rem; }
+
+      /* FOOTER */
+      footer { padding: 36px 20px; flex-direction: column; align-items: flex-start; gap: 20px; }
+      .footer-links { gap: 16px; }
+    }
+
+    @media (max-width: 420px) {
+      .contact-grid { grid-template-columns: 1fr; }
+      .mb-points { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
 <body>
-<p>このページは準備中です。</p>
+
+<!-- ── NAV ── -->
+<nav role="navigation" aria-label="メインナビゲーション">
+  <div class="nav-logo">
+    <a href="#"><img src="/Users/tsukasatsukiyama/Desktop/noa_web/logo_white.png.png" alt="MC KIKAKU NOA" width="160" height="40" /></a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#service">Service</a></li>
+    <li><a href="#company">Company</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">無料トライアル</a>
+  <div class="nav-hamburger" id="hamburger" aria-label="メニューを開く" role="button" tabindex="0">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- モバイルメニュー -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <ul>
+    <li><a href="#service" class="mobile-link">Service</a></li>
+    <li><a href="#company" class="mobile-link">Company</a></li>
+    <li><a href="#contact" class="mobile-link">Contact</a></li>
+  </ul>
+  <a href="#contact" class="mobile-menu-cta mobile-link">無料トライアル</a>
+</div>
+
+<!-- ── HERO ── -->
+<section class="hero" aria-label="ヒーロー">
+  <p class="hero-eyebrow">MC KIKAKU NOA — 葬儀専門 AI ソリューション</p>
+  <h1>遺影写真の<br><span>新時代</span><br>始まります</h1>
+  <p class="hero-sub">
+    最新AIで最短10分納品。コスト最小・品質最高。<br>
+    葬儀業界のデジタル革命を、私たちがサポートします。
+  </p>
+  <div class="hero-badges">
+    <span class="badge accent">最短10分で納品</span>
+    <span class="badge">今より安い価格</span>
+    <span class="badge">最新技術で綺麗</span>
+    <span class="badge">365日対応</span>
+  </div>
+  <div class="hero-cta">
+    <a href="#campaign" class="btn-primary">1ヶ月無料で始める</a>
+    <a href="#service" class="btn-secondary">サービスを見る</a>
+  </div>
+</section>
+
+<!-- ── STATS ── -->
+<div class="stats-strip" aria-label="実績数値">
+  <div class="stat">
+    <div class="stat-num">10<span style="font-size:1.6rem">分</span></div>
+    <div class="stat-label">最短納品時間</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">100<span style="font-size:1.6rem">%</span></div>
+    <div class="stat-label">顧客満足度</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">365<span style="font-size:1.6rem">日</span></div>
+    <div class="stat-label">年中サポート</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">0<span style="font-size:1.6rem">円</span></div>
+    <div class="stat-label">初期費用</div>
+  </div>
+</div>
+
+<!-- ── SERVICE 1: 爆速遺影 ── -->
+<section id="service" style="background:var(--blue-dark);" aria-labelledby="service1-title">
+  <div class="section-inner">
+    <p class="section-label">Main Service</p>
+    <h2 class="section-title" id="service1-title">最新AIで実現<br>爆速遺影写真</h2>
+    <p class="section-body">
+      自社開発の生成AIが、スマホ写真1枚から美しい遺影を最短10分で制作。
+      従来の外注サービスより圧倒的に速く、低コストで高品質な仕上がりを実現します。<br><br>
+      チャットで写真を送るだけで注文完了。最短10分でチャットに納品データが届き、そのままご家族への確認もスムーズに行えます。
+    </p>
+    <ul class="feature-list" style="max-width:560px;">
+      <li>スマホ写真1枚から即制作</li>
+      <li>最短10分・当日納品に対応</li>
+      <li>各サイズへの印刷アプリ同梱</li>
+      <li>遠隔操作サポートで導入安心</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ── SERVICE 2: ChatGPT内製化 ── -->
+<section style="background:var(--blue-deep);" aria-labelledby="service2-title">
+  <div class="section-inner">
+    <p class="section-label">New Service</p>
+    <h2 class="section-title" id="service2-title">遺影写真を<br>外注する時代は<br>終わりました。</h2>
+    <p class="section-body">
+      ChatGPTを活用し、葬儀社が自社で遺影写真を内製化できる体制を構築。
+      難しい写真のみをノアに依頼するだけで、無料で内製化サポートを提供します。
+    </p>
+    <ul class="feature-list" style="max-width:560px;">
+      <li>ChatGPTによる遺影写真の内製化サポート</li>
+      <li>各サイズ対応の印刷アプリ提供</li>
+      <li>難しい写真は"爆速"制作代行</li>
+      <li>難しい写真の依頼で内製化支援が無料</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ── SERVICE 3: Memorial Bird ── -->
+<section id="memorial-bird" style="background:var(--blue-dark);" aria-labelledby="mb-title">
+  <div class="section-inner">
+    <p class="section-label">Product</p>
+    <h2 class="section-title" id="mb-title">Memorial Bird とは？</h2>
+    <div class="split" style="margin-top:44px;">
+      <div>
+        <p class="section-body" style="max-width:100%;">
+          リアルタイム写真投影サービス「メモリアルバード」は、ご参列の皆さまがスマートフォンで式場のQRコードを読み取ることで、故人様との思い出の写真をその場で投稿できる新しい追悼のかたちです。
+          <br><br>
+          投稿されたお写真は、式場内のLEDビジョンやプロジェクターにリアルタイムで映し出され、参列者それぞれの記憶がひとつにつながり、故人様のこれまでの人生を多面的に、あたたかく彩ります。
+          <br><br>
+          すべての投稿写真はご遺族へお渡しし、大切な記憶として、かたちに残すことができます。
+        </p>
+      </div>
+      <div>
+        <p class="section-label" style="margin-bottom:24px;">みなさまにご満足いただける 4 つのポイント</p>
+        <div class="mb-points">
+          <div class="mb-point">
+            <div class="mb-point-num">01</div>
+            <div class="mb-point-text">映し出される<br>感動演出</div>
+          </div>
+          <div class="mb-point">
+            <div class="mb-point-num">02</div>
+            <div class="mb-point-text">ご遺族への<br>写真データ</div>
+          </div>
+          <div class="mb-point">
+            <div class="mb-point-num">03</div>
+            <div class="mb-point-text">誰でも簡単に<br>参加可能</div>
+          </div>
+          <div class="mb-point">
+            <div class="mb-point-num">04</div>
+            <div class="mb-point-text">事前準備<br>一切不要</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FEATURES ── -->
+<section id="features" style="background:var(--blue-deep);" aria-labelledby="features-title">
+  <div class="section-inner">
+    <p class="section-label" style="text-align:center;">Why NOA</p>
+    <h2 class="section-title" id="features-title" style="text-align:center;max-width:600px;margin:0 auto 8px;">
+      選ばれる理由が、あります。
+    </h2>
+    <p class="section-body" style="margin:0 auto;text-align:center;">
+      スピード・品質・サポート——三拍子揃ったサービスで、葬儀社の業務を変えます。
+    </p>
+    <div class="cards-grid">
+      <div class="card">
+        <svg class="card-icon" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M22 4v10M22 30v10M4 22h10M30 22h10" stroke="#00b0ff" stroke-width="2.5" stroke-linecap="round"/>
+          <circle cx="22" cy="22" r="8" stroke="#00b0ff" stroke-width="2.5"/>
+        </svg>
+        <h3>圧倒的スピード</h3>
+        <p>自社開発AIが最短10分で高品質な遺影写真を生成。急なご依頼にも確実に対応します。</p>
+      </div>
+      <div class="card">
+        <svg class="card-icon" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="6" y="14" width="32" height="22" rx="4" stroke="#00b0ff" stroke-width="2.5"/>
+          <path d="M14 14V10a8 8 0 0116 0v4" stroke="#00b0ff" stroke-width="2.5" stroke-linecap="round"/>
+          <circle cx="22" cy="25" r="4" stroke="#00b0ff" stroke-width="2.5"/>
+        </svg>
+        <h3>コスト削減</h3>
+        <p>外注費を大幅削減。内製化することで1枚あたりのコストを最小化し、収益改善に直結します。</p>
+      </div>
+      <div class="card">
+        <svg class="card-icon" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M22 6l4.5 9.1 10 1.5-7.3 7 1.7 10L22 29l-8.9 4.6 1.7-10L7.5 16.6l10-1.5z" stroke="#00b0ff" stroke-width="2.5" stroke-linejoin="round"/>
+        </svg>
+        <h3>最新技術で高品質</h3>
+        <p>最新の生成AI技術により、古い写真・暗い写真・ピンぼけ写真も美しく仕上げます。</p>
+      </div>
+      <div class="card">
+        <svg class="card-icon" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="22" cy="22" r="16" stroke="#00b0ff" stroke-width="2.5"/>
+          <path d="M22 12v10l6 4" stroke="#00b0ff" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+        <h3>安心のサポート体制</h3>
+        <p>365日対応。遠隔操作システムでトラブルにも即対応。LINE・LINE Works・ChatWork・Teams・Google Chat対応。</p>
+      </div>
+      <div class="card">
+        <svg class="card-icon" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="6" y="10" width="32" height="24" rx="3" stroke="#00b0ff" stroke-width="2.5"/>
+          <path d="M14 38h16M22 34v4" stroke="#00b0ff" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M12 20h20M12 26h12" stroke="#00b0ff" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+        <h3>印刷アプリ付き</h3>
+        <p>遺影写真を各種サイズに対応した印刷アプリを提供。自社印刷で納期をさらに短縮できます。</p>
+      </div>
+      <div class="card">
+        <svg class="card-icon" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="22" cy="14" r="6" stroke="#00b0ff" stroke-width="2.5"/>
+          <path d="M10 38c0-6.6 5.4-12 12-12s12 5.4 12 12" stroke="#00b0ff" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M32 10l3 3-6 6" stroke="#00b0ff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <h3>導入・運用支援</h3>
+        <p>初めての方でも安心。丁寧なオンボーディングと継続的な運用サポートで内製化を成功へ。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CAMPAIGN ── -->
+<section id="campaign" class="campaign" aria-labelledby="campaign-title">
+  <div class="section-inner" style="position:relative;z-index:1;">
+    <span class="campaign-label">期間限定キャンペーン</span>
+    <h2 id="campaign-title">遺影写真作成料<br>1ヶ月無料</h2>
+    <p>初期費用・機材費・用紙代——すべて無料。1枚からお試しいただけます。</p>
+    <a href="#contact" class="btn-primary" style="font-size:1.05rem;padding:18px 48px;">今すぐ無料で始める</a>
+    <p class="campaign-note">※遺影作成料1ヶ月無料キャンペーンは、1社様につき1会館までの適用となります。</p>
+  </div>
+</section>
+
+<!-- ── COMPANY ── -->
+<section id="company" style="background:var(--blue-dark);" aria-labelledby="company-title">
+  <div class="section-inner">
+    <p class="section-label">Company</p>
+    <h2 class="section-title" id="company-title">会社概要</h2>
+    <table class="company-table">
+      <tbody>
+        <tr><th scope="row">会社名</th><td>有限会社エムシー企画ノア</td></tr>
+        <tr><th scope="row">英語表記</th><td>MC KIKAKU NOA Co., Ltd.</td></tr>
+        <tr><th scope="row">事業内容</th><td>遺影写真制作・遺影写真内製化サポート・葬儀関連製品の販売</td></tr>
+        <tr><th scope="row">所在地</th><td>〒623-0046<br>京都府綾部市大島町中地 28-2</td></tr>
+        <tr><th scope="row">電話番号</th><td>077-552-2811</td></tr>
+        <tr><th scope="row">メール</th><td>info@mc-noa.com</td></tr>
+        <tr><th scope="row">対応時間</th><td>365日</td></tr>
+        <tr><th scope="row">対応チャット</th><td>LINE / LINE Works / ChatWork / Teams / Google Chat / WeChat</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ── CONTACT ── -->
+<section id="contact" class="contact-section" aria-labelledby="contact-title">
+  <div class="section-inner">
+    <p class="section-label" style="text-align:center;">Contact</p>
+    <h2 class="section-title" id="contact-title" style="text-align:center;">お気軽にご連絡ください</h2>
+    <p class="section-body" style="margin:0 auto;text-align:center;">
+      ご質問・ご相談・お見積もり、何でもお気軽にどうぞ。
+    </p>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <svg class="c-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M6 8h24a2 2 0 012 2v16a2 2 0 01-2 2H6a2 2 0 01-2-2V10a2 2 0 012-2z" stroke="#00b0ff" stroke-width="2"/>
+          <path d="M4 10l14 10L32 10" stroke="#00b0ff" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <div class="label">EMAIL</div>
+        <div class="value"><a href="mailto:info@mc-noa.com">info@mc-noa.com</a></div>
+      </div>
+      <div class="contact-card">
+        <svg class="c-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M7 5h6l2.5 6.5-3.5 2a18 18 0 008.5 8.5l2-3.5L29 21v6a2 2 0 01-2 2C11.4 29 7 14.6 7 7a2 2 0 012-2z" stroke="#00b0ff" stroke-width="2" stroke-linejoin="round"/>
+        </svg>
+        <div class="label">PHONE</div>
+        <div class="value"><a href="tel:0775522811">077-552-2811</a></div>
+      </div>
+      <div class="contact-card">
+        <svg class="c-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M18 4C10.3 4 4 9.7 4 16.7c0 4.4 2.4 8.3 6 10.7L8 32l5.6-2.8c1.4.4 2.9.6 4.4.6 7.7 0 14-5.7 14-12.7S25.7 4 18 4z" stroke="#00b0ff" stroke-width="2" stroke-linejoin="round"/>
+          <path d="M12 16h12M12 20h8" stroke="#00b0ff" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <div class="label">LINE / CHAT</div>
+        <div class="value"><a href="https://line.me/ti/p/i1-aJEBPQK" target="_blank" rel="noopener">LINEで問い合わせ</a></div>
+        <div class="sub">担当：築山 つかさ</div>
+      </div>
+      <div class="contact-card">
+        <svg class="c-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M18 4C13.6 4 10 7.6 10 12c0 6.6 8 18 8 18s8-11.4 8-18c0-4.4-3.6-8-8-8z" stroke="#00b0ff" stroke-width="2"/>
+          <circle cx="18" cy="12" r="3" stroke="#00b0ff" stroke-width="2"/>
+        </svg>
+        <div class="label">ADDRESS</div>
+        <div class="value" style="font-size:.88rem;color:var(--blue-accent);">京都府綾部市大島町中地28-2</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-logo">
+    <a href="#"><img src="/Users/tsukasatsukiyama/Desktop/noa_web/logo_white.png.png" alt="MC KIKAKU NOA" width="140" height="28" /></a>
+  </div>
+  <div class="footer-links">
+    <a href="#service">Service</a>
+    <a href="#company">Company</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div class="footer-copy">Copyright. MC KIKAKU NOA Co., Ltd. All Right Reserved</div>
+</footer>
+
+<!-- ── JS: ハンバーガーメニュー ── -->
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.toggle('open');
+    mobileMenu.setAttribute('aria-hidden', !isOpen);
+    hamburger.setAttribute('aria-expanded', isOpen);
+  });
+  document.querySelectorAll('.mobile-link').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      mobileMenu.setAttribute('aria-hidden', 'true');
+    });
+  });
+</script>
+
 </body>
 </html>
